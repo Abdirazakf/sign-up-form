@@ -91,14 +91,14 @@ a {
     font-weight: bold;
     font-family: Inter;
     font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: auto;
 }
 
 .form-header > p {
-    width: 55%;
-}
-
-.first-p {
-    margin-top: 150px;
+    width: 58%;
 }
 
 .form-section{
