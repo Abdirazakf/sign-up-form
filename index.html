@@ -28,40 +28,48 @@
         </div>
         <div class="form-section">
             <h1>Let's do this</h1>
-            <form action="https://httpbin.org/post" method="post">
+            <form id="site-form" action="https://httpbin.org/post" method="post">
                 <div class="name-section">
                     <div class="first_name">
-                        <label for="first_name">First Name</label>
-                        <input type="text" id="first_name" name="first_name" required>
+                        <label for="first_name">FIRST NAME</label>
+                        <input type="text" id="first_name" name="first_name" 
+                        minlength="1" required>
                     </div>
                     <div class="last_name">
-                        <label for="last_name">Last Name</label>
-                        <input type="text" id="last_name" name="last_name" required>
+                        <label for="last_name">LAST NAME</label>
+                        <input type="text" id="last_name" name="last_name" 
+                        minlength="1" required>
                     </div>
                 </div>
                 <div class="contact-info">
                     <div class="email">
-                        <label for="user_email">Email</label>
+                        <label for="user_email">EMAIL</label>
                         <input type="email" id="user_email" name="email_address" placeholder="john@example.com" required>
                     </div>
                     <div class="phone">
-                        <label for="phone_number">Phone Number</label>
-                        <input type="tel" id="phone_number" name="phone_number" placeholder="555-555-5555" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+                        <label for="phone_number">PHONE NUMBER</label>
+                        <input type="tel" id="phone_number" name="phone_number" 
+                        placeholder="555-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        title="Please enter your phone number separated by dashes" required>
                     </div>
                 </div>
                 <div class="password">
                     <div class="initial-pass">
-                        <label for="password">Password</label>
-                        <input type="text" name="password" id="password" required>
+                        <label for="password">PASSWORD</label>
+                        <input type="text" name="password" id="password" pattern= "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
+                        required>
                     </div>
                     <div class="confirm-pass">
-                        <label for="confirm_pass">Confirm Password</label>
-                        <input type="text" name="confirm_password" id="confirm_pass" required>
+                        <label for="confirm_pass">CONFIRM PASSWORD</label>
+                        <input type="text" name="confirm_password" id="confirm_pass" pattern= "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
+                        required>
                     </div>
                 </div>
             </form>
         </div>
-        <div class="form-end"></div>
+        <div class="form-end">
+            <button type="submit" form="site-form">Create Account</button>
+        </div>
     </div>
 </body>
 </html>
