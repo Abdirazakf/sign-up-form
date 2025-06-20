@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+:root{
+    --invalid-border-color: #ce6060;
+}
+
 html,body{
     margin: 0;
     height: 100%;
@@ -82,7 +86,7 @@ a {
 .form-section,
 .form-end{
     width: 100%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .form-header{
@@ -101,8 +105,63 @@ a {
     width: 58%;
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+}
+
 .form-section{
     height: 35%;
+    padding-left: 30px;
+    font-family: Inter;
+    box-shadow: 0 10px 20px -20px black;
+}
+
+.form-section > h1{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+input {
+    padding: 5px;
+    width: 70%;
+    border: 1px solid #E5E7EB;
+    outline: none;
+    border-radius: 4px;
+}
+
+input:focus{
+    border: 1px solid blue;
+    box-shadow: 0 10px 20px -20px black;
+}
+
+input:invalid::before{
+    border: 1px solid var(--invalid-border-color);
+    background-color: lightcoral;
+}
+
+label{
+    display: block;
+}
+
+.name-section,
+.contact-info,
+.password{
+    /* border: 2px solid red; */
+    width: 60%;
+    display: flex;
+}
+
+.name-section > div,
+.contact-info > div,
+.password > div{
+    /* border: 2px solid black; */
+    width: 100%;
+}
+
+.contact-info,
+.password{
+    margin-top: 10px;
 }
 
 .form-end{
