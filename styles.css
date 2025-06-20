@@ -81,6 +81,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: auto;
 }
 
 .form-header,
@@ -92,7 +93,7 @@ a {
 
 .form-header{
     height: 45%;
-    padding: 30px;
+    padding: 40px;
     font-weight: bold;
     font-family: Inter;
     font-size: 1.3rem;
@@ -113,7 +114,7 @@ form{
 
 .form-section{
     height: 35%;
-    padding: 0px 20px 20px 30px;
+    padding: 0px 20px 20px 40px;
     font-family: Inter;
     box-shadow: 0 10px 20px -20px black;
 }
@@ -134,10 +135,16 @@ input {
 
 input:focus{
     border: 1px solid blue;
-    box-shadow: 0 10px 20px -20px black;
+    box-shadow: 0px 10px 13px -7px black;
 }
 
-input:invalid:focus{
+input[id="password"]:invalid,
+input[id="confirm_pass"]:invalid{
+    border: 1px solid var(--invalid-border-color);
+}
+
+input[id="password"]:invalid:focus,
+input[id="confirm_pass"]:invalid:focus{
     border: 1px solid var(--invalid-border-color);
     background-color: lightcoral;
 }
@@ -170,7 +177,7 @@ label{
 
 .form-end{
     height: 30%;
-    padding: 20px 0 0 30px;
+    padding: 20px 0 0 40px;
 }
 
 .form-end > button{
@@ -183,5 +190,17 @@ label{
     font-family: Inter;
     font-size: 1rem;
     font-weight: bold;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     cursor: pointer;
+    overflow: hidden;
+}
+
+.form-end > p {
+    font-size: 1.3rem;
+}
+
+.form-end > p > a{
+    color: var(--form-end-color);
+    text-decoration: none;
+    font-weight: bold;
 }

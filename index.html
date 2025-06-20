@@ -56,19 +56,20 @@
                 <div class="password">
                     <div class="initial-pass">
                         <label for="password">PASSWORD</label>
-                        <input type="text" name="password" id="password" pattern= "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
-                        required>
+                        <input type="text" name="password" id="password" pattern= "(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).{8,}"
+                        title="Must contain minimum 8 characters, 1 uppercase, 1 lowercase, 1 number, and 1 special (#?!@$%^&*-)" required>
                     </div>
                     <div class="confirm-pass">
                         <label for="confirm_pass">CONFIRM PASSWORD</label>
-                        <input type="text" name="confirm_password" id="confirm_pass" pattern= "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
-                        required>
+                        <input type="text" name="confirm_password" id="confirm_pass" pattern= "(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).{8,}"
+                        title="Must contain minimum 8 characters, 1 uppercase, 1 lowercase, 1 number, and 1 special (#?!@$%^&*-)" required>
                     </div>
                 </div>
             </form>
         </div>
         <div class="form-end">
             <button type="submit" form="site-form">Create Account</button>
+            <p>Already have an account? <a href="./login-page">Log in</a></p>
         </div>
     </div>
 </body>
