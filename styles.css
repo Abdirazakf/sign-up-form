@@ -92,14 +92,14 @@ a {
 }
 
 .form-header{
-    height: 45%;
+    height: 30%;
     padding: 40px;
     font-weight: bold;
     font-family: Inter;
     font-size: 1.3rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     overflow: auto;
 }
 
@@ -113,8 +113,8 @@ form{
 }
 
 .form-section{
-    height: 35%;
-    padding: 0px 20px 20px 40px;
+    height: 40%;
+    padding: 20px 20px 20px 40px;
     font-family: Inter;
     box-shadow: 0 10px 20px -20px black;
 }
@@ -193,6 +193,16 @@ label{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     cursor: pointer;
     overflow: hidden;
+
+}
+
+.form-end > button:hover{
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0,0,0,0);
+    position: relative;
+    transition-duration: 0.3s;
+    transform: translateY(-5px);
 }
 
 .form-end > p {
